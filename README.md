@@ -7,5 +7,5 @@ Los parciales de ASM pasan todos los tests, y el de System Programming está apr
 
 El TP de system programming fue hecho en conjunto con otros dos alumnos:
 
-* @necropheus
-* @wachinalpha 
+* [Gustavo Viana](https://github.com/necropheus)
+* [Emiliano Retri](https://github.com/wachinalpha)
