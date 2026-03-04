@@ -1,0 +1,36 @@
+name: Autograding Tests
+
+on:
+    pull_request:
+        types: [labeled]
+        branches:
+            - main
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: self-hosted
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Tester
+        id: tester
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: tester
+          command: ./tester.sh
+          timeout: 10
+          max-score: '1'
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          TESTER_RESULTS: "${{steps.tester.outputs.result}}"
+        with:
+          runners: tester

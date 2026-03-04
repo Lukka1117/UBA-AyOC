@@ -1,0 +1,33 @@
+count: 8
+particle[0].pos: (0.000000; 0.000000)
+particle[0].vel: (5.000000; 5.000000)
+particle[0].size: 941.188110
+particle[0].color: #000000FF
+particle[1].pos: (0.000000; 0.000000)
+particle[1].vel: (5.000000; -5.000000)
+particle[1].size: 85.297012
+particle[1].color: #0000FFFF
+particle[2].pos: (0.000000; 0.000000)
+particle[2].vel: (-5.000000; 5.000000)
+particle[2].size: -0.274838
+particle[2].color: #00FF00FF
+particle[3].pos: (0.000000; 0.000000)
+particle[3].vel: (-5.000000; -5.000000)
+particle[3].size: -9.000000
+particle[3].color: #00FFFFFF
+particle[4].pos: (0.320000; 100.099998)
+particle[4].vel: (0.500000; -0.200000)
+particle[4].size: -9.900000
+particle[4].color: #FF0000FF
+particle[5].pos: (1.230000; 4.560000)
+particle[5].vel: (-0.100000; 9.100000)
+particle[5].size: -9.990000
+particle[5].color: #FF00FFFF
+particle[6].pos: (7.890000; 0.120000)
+particle[6].vel: (8.500000; 7.300000)
+particle[6].size: -2.924938
+particle[6].color: #FFFF00FF
+particle[7].pos: (3.450000; 6.780000)
+particle[7].vel: (0.000000; 0.000000)
+particle[7].size: -5.050000
+particle[7].color: #FFFFFFFF

@@ -1,0 +1,7 @@
+	.gdb_history
+	*.o
+	test_asm
+	test_c
+	test_utils/venv/*
+	test_utils/*.txt
+	!test_utils/requirements.tx

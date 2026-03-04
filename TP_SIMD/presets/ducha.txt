@@ -1,0 +1,31 @@
+count: 26026
+[DEBUG] Arrows: no
+spawn.x: 0.000000
+spawn.y: -200.000000
+spawn_spread.x: 20.000000
+spawn_spread.y: 0.000000
+[EJ1] Posiciones: yes
+g.x: 0.000000
+g.y: 0.120593
+velocity.x: 0.000000
+velocity.y: 1.478474
+velocity_spread.x: 4.837899
+velocity_spread.y: 3.001476
+[EJ2] Tamanios: yes
+size.a: 1.002153
+size.b: 0.200000
+size.c: 1.000000
+size: 28.560755
+size_spread: 38.183910
+[EJ3] Colores: yes
+palette: 3
+fade.r: 10
+fade.g: 5
+fade.b: 0
+fade.a: 1
+[EJ4] Orbitar: yes
+orbit_start.x: -100.000000
+orbit_start.y: -100.000000
+orbit_end.x: 100.000000
+orbit_end.y: 100.000000
+orbit_radius: 50.000000

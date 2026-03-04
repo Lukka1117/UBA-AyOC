@@ -1,0 +1,55 @@
+name: Autograding Tests
+on:
+    pull_request:
+        types: [labeled]
+        branches:
+            - main
+            - master
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: self-hosted
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+    - name: "[ASM] EJ1"
+      id: asm-ej1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "[ASM] EJ1"
+        setup-command: ''
+        command: make run_asm_ej1
+        timeout: 10
+        max-score: 1
+    - name: "[ASM] EJ2"
+      id: asm-ej2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "[ASM] EJ2"
+        setup-command: ''
+        command: make run_asm_ej2
+        timeout: 10
+        max-score: 1
+    - name: "[ASM] EJ3"
+      id: asm-ej3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "[ASM] EJ3"
+        setup-command: ''
+        command: make run_asm_ej3
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        ASM-EJ1_RESULTS: "${{steps.asm-ej1.outputs.result}}"
+        ASM-EJ2_RESULTS: "${{steps.asm-ej2.outputs.result}}"
+        ASM-EJ3_RESULTS: "${{steps.asm-ej3.outputs.result}}"
+      with:
+        runners: asm-ej1,asm-ej2,asm-ej3

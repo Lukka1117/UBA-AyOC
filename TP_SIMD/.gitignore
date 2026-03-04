@@ -1,0 +1,16 @@
+*.o
+main
+test_c
+test_c_ej1
+test_c_ej2
+test_c_ej3
+test_c_ej4
+test_asm
+test_asm_ej1
+test_asm_ej2
+test_asm_ej3
+test_asm_ej4
+test_recorder
+grader
+props.txt
+.gdb_history
